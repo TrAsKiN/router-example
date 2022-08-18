@@ -38,7 +38,7 @@ class Router
     {
         $request = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
         foreach ($this->routes as $route) {
-            $pattern = sprintf('#^%s#', $route->schema); // Met le schéma entre des # pour former l'expression régulière
+            $pattern = sprintf('#^%s$#', $route->schema); // Met le schéma entre des # pour former l'expression régulière
             $check = preg_match($pattern, $request); // Effectue la recherche entre le schéma et l'url
             if ($check === 1) {
                 // Le schéma d'une route correspond à l'url

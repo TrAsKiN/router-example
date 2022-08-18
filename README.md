@@ -49,7 +49,7 @@ Parfait ! Attaquons-nous à la partie la plus complexe. La méthode `findRoute()
 
 D'abord, nous avons besoin de l'url. Elle est accessible depuis la variable `$_SERVER['REQUEST_URI']` que nous enregistrons dans une variable `$request`.
 
-Il est temps de tester toutes les routes qui ont été enregistrées grâce à une boucle `foreach`. Plutôt que de faire une simple condition, il est souvent préférable d'utiliser une expression régulière. Pour pouvoir utiliser notre schéma en tant qu'expression régulière, il faut l'encadrer avec des caractères spéciaux. Ici, j'ai choisi d'utiliser des `#`.
+Il est temps de tester toutes les routes qui ont été enregistrées grâce à une boucle `foreach`. Plutôt que de faire une simple condition, il est souvent préférable d'utiliser une expression régulière. Pour pouvoir utiliser notre schéma en tant qu'expression régulière, il faut l'encadrer avec des caractères spéciaux. Ici, j'ai choisi d'utiliser des `#`. Le symbole `^` précise que ça doit *commencer par* et le symbole `$` *finir par*.
 
 Ensuite, la fonction `preg_match()` effectue une recherche de correspondance. Si le résultat est égal à `1` alors il y a une correspondance et la route que l'on est en train de tester est la bonne, nous pouvons l'enregistrer ! Si le résultat est égal à `0` alors il n'y a pas de correspondance et donc nous pouvons afficher une page 404. Enfin, si le résultat vaut `false` c'est qu'il y a une erreur avec notre test et il faut donc émettre une exception.
 

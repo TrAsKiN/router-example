@@ -45,6 +45,6 @@ class App
         } catch (Exception $e) {
             return $e->getMessage();
         }
-        return null;
+        return "404";
     }
 }
