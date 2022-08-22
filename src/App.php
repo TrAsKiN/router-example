@@ -10,7 +10,7 @@ use Exception;
 
 class App
 {
-    private readonly Router $router;
+    private Router $router;
 
     public function __construct()
     {
