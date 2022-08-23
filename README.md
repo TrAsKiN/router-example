@@ -1,5 +1,7 @@
 # Exemple d'un routeur PHP basique en POO/MVC
 
+*Code pour PHP version 8.1, existe pour la [version 7.4](https://github.com/TrAsKiN/router-example/tree/php_7.4).*
+
 ## Lancer l'application facilement avec PHP
 
 Il est très facile de lancer l'application avec le serveur interne de PHP. Il suffit de lancer la commande suivante dans un terminal depuis la racine du projet :
@@ -7,6 +9,8 @@ Il est très facile de lancer l'application avec le serveur interne de PHP. Il s
 - `php -S localhost:8000 -t public/`
 
 À partir de maintenant, l'application est accessible depuis votre navigateur à l'adresse : http://localhost:8000/ !
+
+*N'oubliez pas de lancer la commande `composer dump-autoload`.*
 
 ## Avant le routeur, l'application
 
@@ -29,7 +33,7 @@ Et c'est tout ! On peut bien sûr y ajouter quelques fonctions pratiques, par ex
 
 Maintenant que nous avons défini ce que fera le routeur, il est temps de commencer !
 
-Hum... Pas si vite ! Il manque élément, la route ! Sans route, notre routeur ne sert pas à grand-chose. Et pour définir une route, il n'y a rien de plus simple qu'une classe. Elle ne fera rien de plus qu'avoir des propriétés qui définissent une route, soit :
+Hum... Pas si vite ! Il manque un élément, la route ! Sans route, notre routeur ne sert pas à grand-chose. Et pour définir une route, il n'y a rien de plus simple qu'une classe. Elle ne fera rien de plus qu'avoir des propriétés qui définissent une route, soit :
 
 1. Le schéma de son URL
 2. Son nom
