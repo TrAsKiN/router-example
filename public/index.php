@@ -3,4 +3,4 @@
 require '../vendor/autoload.php';
 
 $app = new \App\App();
-echo $app->run();
+print_r($app->run());
