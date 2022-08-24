@@ -41,14 +41,14 @@ class Router
         foreach ($this->routes as $route) {
             $pattern = sprintf('#^%s$#', $route->schema); // Met le schéma entre des # pour former l'expression régulière
             $check = preg_match($pattern, $request); // Effectue la recherche entre le schéma et l'url
-            if ($check === 1) {
+            if ($check === false) {
+                // Une erreur est survenue dans le test
+                throw new Exception();
+            } elseif ($check === 1) {
                 // Le schéma d'une route correspond à l'url
                 $this->foundRoute = $route;
             } elseif ($check === 0) {
                 // Aucun schéma ne correspond
-            } else {
-                // Une erreur est survenue dans le test
-                throw new Exception();
             }
         }
         return $this->foundRoute;
