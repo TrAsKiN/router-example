@@ -1,5 +1,7 @@
 # Exemple d'un routeur PHP basique en POO/MVC
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/41ffe1f137f544839bc3b47730750317)](https://www.codacy.com/gh/TrAsKiN/router-example/dashboard)
+
 *Code pour PHP version 8.1, existe pour la [version 7.4](https://github.com/TrAsKiN/router-example/tree/php_7.4).*
 
 ## Lancer l'application facilement avec PHP
